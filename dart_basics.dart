@@ -115,6 +115,18 @@ print('\n--- PART B3 ---');
   print(addVat(1000));
   print(addVat(999));
   print(addVat(1000, rate: 0));
+
+  print('\n--- PART D2 ---');
+  int totalFees = 0;
+  int i = 1;
+  while (i <= d + 3) { // Loop runs 1 to 11
+    int amount = i * 4000 + t * 100; // 4000*i + 8800
+    int fee = momoFee(amount);
+    totalFees += fee;
+    print('Receipt $i | $amount RWF | fee $fee RWF | to ${maskPhone('0788123456')}');
+    i++;
+  }
+  print('Total fees: $totalFees RWF');
 }
 
 int countVowels(String text) {
@@ -170,3 +182,16 @@ void doubleIt(int value) {
 }
 
 int addVat(int price, {int rate = 18}) => price + price * rate ~/ 100;
+
+int momoFee(int amount) {
+  if (amount <= 0) return -1;
+  if (amount <= 1000) return 20;
+  if (amount <= 10000) return 100;
+  if (amount <= 150000) return 250;
+  return 1500;
+}
+
+String maskPhone(String phone) {
+  if (phone.length != 10) return 'INVALID';
+  return phone.substring(0, 3) + '*' * (phone.length - 5) + phone.substring(phone.length - 2);
+}
