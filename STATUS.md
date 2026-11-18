@@ -1,12 +1,13 @@
-# Status Check-in (3:00 PM)
+# Status Check-in (Final)
 
 ## Done
-- Part A (A1, A2) complete
-- Part B1 (Trace) complete
-- Part B2 (countVowels function) complete
+- All parts (A-G) completed
+- answers.pdf finalized and generated
+- momo_sim.dart completed and tested
+- All code pushed to GitHub
 
 ## In progress
-- Working on Part B3 and Part C
+- Ready for final submission
 
 ## Stuck on
-- Nothing right now
+- Nothing
