@@ -19,4 +19,14 @@ void main() {
   print(-17.abs());
   print(0.1 + 0.2 == 0.3);
   print(10 == 10.0);
-}
+
+    print('\n--- PART A2 ---');
+  int x = d; // This uses your D (8)
+  int y = t; // This uses your T (88)
+  var z = x * 2 + y ~/ 4;
+  z += x;
+  print(z);
+  print(z.isEven);
+  print('$z' + '$x');
+
+} 
