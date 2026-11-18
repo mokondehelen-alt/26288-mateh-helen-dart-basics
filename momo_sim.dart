@@ -5,7 +5,6 @@ const String regNo = '26288';
 final int d = int.parse(regNo[regNo.length - 1]);
 final int t = int.parse(regNo.substring(regNo.length - 2));
 
-// by H.M.
 int momoFee(int amount) {
   if (amount <= 0) return -1;
   if (amount <= 1000) return 20;
@@ -103,7 +102,7 @@ void main() {
   balance = sendMoney(balance, 200000);
   print('Final balance: ${formatRwf(balance)}');
   
-  // Test calls
+  
   print(formatRwf(0));        
   print(formatRwf(999));      
   print(formatRwf(1000));     
