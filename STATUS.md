@@ -1,11 +1,12 @@
-# Status Check-in
+# Status Check-in (3:00 PM)
 
 ## Done
-- Repo created and link ready to send
-- Part A and B questions reviewed
+- Part A (A1, A2) complete
+- Part B1 (Trace) complete
+- Part B2 (countVowels function) complete
 
 ## In progress
-- Writing Dart code for Part B and C
+- Working on Part B3 and Part C
 
 ## Stuck on
-- Nothing yet
+- Nothing right now
