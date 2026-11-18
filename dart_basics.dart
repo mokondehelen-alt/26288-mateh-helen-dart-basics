@@ -53,6 +53,58 @@ print('\n--- PART B3 ---');
   print(initials(myName)); 
   print(initials('ana uwase')); 
   print(initials(''));
+
+  print('\n--- PART C1 ---');
+  for (int i = 0; i < 6; i++) {
+    if (i == 2) continue;
+    if (i == 4) break;
+    print(i);
+  }
+
+  print('\n--- PART C2 ---');
+  int day = 2;
+  switch (day) {
+    case 1:
+    case 2:
+      print('Early week');
+    case 3:
+      print('Midweek');
+    default:
+      print('Weekend soon');
+  }
+
+  print('\n--- PART C3 ---');
+  int? bonus;
+  print(bonus ?? 50);
+  bonus ??= 70;
+  bonus ??= 90;
+  print(bonus);
+
+  int n = 10;
+  do {
+    print(n);
+    n += 3;
+  } while (n < 10);
+
+  print('\n--- PART C4 ---');
+  int c4x = d; // Changed to c4x so it doesn't clash with Part A2
+  String result = '';
+  while (c4x > 0) {
+    if (c4x % 2 == 0) {
+      result += 'E';
+    } else {
+      result += 'O';
+    }
+    c4x -= 3;
+  }
+  print(result);
+  print(result.length);
+  print(result.isEmpty ? 'nothing' : result[0]);
+
+ print('\n--- PART C5 ---');
+  drawTriangle(d + 3);
+  drawTriangle(0);
+  drawTriangle(-2); 
 }
 
 int countVowels(String text) {
@@ -83,5 +135,16 @@ String initials(String fullName) {
     i++;
   }
   return result;
+
+
 }
 
+void drawTriangle(int height) {
+  int row = 1;
+  while (row <= height) {
+    String pad = ' ' * (height - row);
+    String ch = (row % 2 == 1) ? '*' : '#';
+    print(pad + ch * (2 * row - 1));
+    row++;
+  }
+}
