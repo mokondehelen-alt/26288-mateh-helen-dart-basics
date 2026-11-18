@@ -29,4 +29,59 @@ void main() {
   print(z.isEven);
   print('$z' + '$x');
 
-} 
+  print('\n--- PART B1 ---');
+  String city = 'Kigali';
+  print(city.length);
+  print(city[city.length - 1]);
+  print(city.substring(2, 4));
+  print(city.toUpperCase().indexOf('A'));
+  print(city.contains('k'));
+  print('$city.length');
+  print('${city.length}');
+  print(city * 2);
+  city.toUpperCase();
+  print(city);
+  print(city.replaceAll('i', '!'));
+  print('5' + 5.toString());
+  print(int.parse('5') + 5);
+
+print('\n--- PART B2 ---');
+  String myName = 'Helen Bokeng Mokonde Mateh';
+  print('$myName has ${countVowels(myName)} vowels');
+
+print('\n--- PART B3 ---');
+  print(initials(myName)); 
+  print(initials('ana uwase')); 
+  print(initials(''));
+}
+
+int countVowels(String text) {
+  int count = 0;
+  int i = 0;
+  String lowerText = text.toLowerCase(); 
+  
+  while (i < lowerText.length) {
+    String char = lowerText[i];
+    if (char == 'a' || char == 'e' || char == 'i' || char == 'o' || char == 'u') {
+      count++;
+    }
+    i++;
+  }
+  return count;
+}
+
+String initials(String fullName) {
+  String trimmed = fullName.trim();
+  if (trimmed.isEmpty) return '';
+  
+  List<String> words = trimmed.split(RegExp(r'\s+')); 
+  String result = '';
+  
+  int i = 0;
+  while (i < words.length) {
+    result += words[i][0].toUpperCase() + '.';
+    i++;
+  }
+  return result;
+}
+
