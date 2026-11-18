@@ -105,6 +105,16 @@ print('\n--- PART B3 ---');
   drawTriangle(d + 3);
   drawTriangle(0);
   drawTriangle(-2); 
+
+  print('\n--- PART D1 ---');
+  bump();
+  print(count); // This is the global count
+  int v = 5;
+  doubleIt(v);
+  print(v);
+  print(addVat(1000));
+  print(addVat(999));
+  print(addVat(1000, rate: 0));
 }
 
 int countVowels(String text) {
@@ -148,3 +158,15 @@ void drawTriangle(int height) {
     row++;
   }
 }
+int count = 1; // Global variable
+
+void bump() {
+  int count = 10; // Local variable
+  count++;
+}
+
+void doubleIt(int value) {
+  value = value * 2;
+}
+
+int addVat(int price, {int rate = 18}) => price + price * rate ~/ 100;
